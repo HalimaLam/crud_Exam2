@@ -8,18 +8,24 @@
 <body>
 <div class="container my-2">
     <h1>Add User</h1>
+
     <form th:action="@{/saveUser}" th:object="${user}" method="post">
         <div class="form-group">
             <label for="firstname">First Name:</label>
             <input type="text" class="form-control" id="firstname" th:field="*{firstname}" required>
         </div>
         <div class="form-group">
-            <label for="lastname">Last Name:</label>
-            <input type="text" class="form-control" id="lastname" th:field="*{lastname}" required>
-        </div>
-        <div class="form-group">
             <label for="email">Email:</label>
             <input type="email" class="form-control" id="email" th:field="*{email}" required>
+        </div>
+        <div class="form-group">
+            <label for="skill">Email:</label>
+            <input type="skill" class="form-control" id="skill" th:field="*{skill}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="project">Email:</label>
+            <input type="project" class="form-control" id="project" th:field="*{project}" required>
         </div>
         <!--<div class="form-group">
             <label for="gender">Gender:</label>
@@ -30,7 +36,7 @@
                 <option value="Other">Other</option>
             </select>
         </div>-->
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Save</button>
         <a th:href="@{/}" class="btn btn-secondary">Back to User List</a>
     </form>
 </div>

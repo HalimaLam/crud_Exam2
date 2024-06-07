@@ -8,4 +8,5 @@ public interface UserService {
     void saveUser(User user);
     User getUserById(long id);
     void deleteUserById(long id);
+    boolean assignProjectToEmployee(String employeeName, String projectName);
 }
